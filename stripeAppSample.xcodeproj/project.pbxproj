@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DBC8F19CB33A61A7CEAD2BF /* Pods_stripeAppSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D20E05B6AB1D967F19EFE8C /* Pods_stripeAppSample.framework */; };
 		61C3F1B824812DCB000A6604 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C3F1B724812DCB000A6604 /* AppDelegate.swift */; };
 		61C3F1BA24812DCB000A6604 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C3F1B924812DCB000A6604 /* SceneDelegate.swift */; };
 		61C3F1BC24812DCB000A6604 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C3F1BB24812DCB000A6604 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0111E95C541C934C74E4750E /* Pods-stripeAppSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stripeAppSample.debug.xcconfig"; path = "Target Support Files/Pods-stripeAppSample/Pods-stripeAppSample.debug.xcconfig"; sourceTree = "<group>"; };
 		61C3F1B424812DCB000A6604 /* stripeAppSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stripeAppSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61C3F1B724812DCB000A6604 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61C3F1B924812DCB000A6604 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		61C3F1C024812DCD000A6604 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61C3F1C324812DCD000A6604 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		61C3F1C524812DCD000A6604 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D20E05B6AB1D967F19EFE8C /* Pods_stripeAppSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_stripeAppSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD8A503C31959CEAB9994133 /* Pods-stripeAppSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stripeAppSample.release.xcconfig"; path = "Target Support Files/Pods-stripeAppSample/Pods-stripeAppSample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DBC8F19CB33A61A7CEAD2BF /* Pods_stripeAppSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A4BF73EC9E4853F0768B3DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D20E05B6AB1D967F19EFE8C /* Pods_stripeAppSample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		61C3F1AB24812DCB000A6604 = {
 			isa = PBXGroup;
 			children = (
 				61C3F1B624812DCB000A6604 /* stripeAppSample */,
 				61C3F1B524812DCB000A6604 /* Products */,
+				EE63284386816C12E2613C81 /* Pods */,
+				4A4BF73EC9E4853F0768B3DE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,16 @@
 			path = stripeAppSample;
 			sourceTree = "<group>";
 		};
+		EE63284386816C12E2613C81 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0111E95C541C934C74E4750E /* Pods-stripeAppSample.debug.xcconfig */,
+				CD8A503C31959CEAB9994133 /* Pods-stripeAppSample.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 61C3F1C824812DCD000A6604 /* Build configuration list for PBXNativeTarget "stripeAppSample" */;
 			buildPhases = (
+				3C96E16636A77DD248438BCA /* [CP] Check Pods Manifest.lock */,
 				61C3F1B024812DCB000A6604 /* Sources */,
 				61C3F1B124812DCB000A6604 /* Frameworks */,
 				61C3F1B224812DCB000A6604 /* Resources */,
+				876703A7B9D228077B2C9EA9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3C96E16636A77DD248438BCA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-stripeAppSample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		876703A7B9D228077B2C9EA9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-stripeAppSample/Pods-stripeAppSample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-stripeAppSample/Pods-stripeAppSample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-stripeAppSample/Pods-stripeAppSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		61C3F1B024812DCB000A6604 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		61C3F1C924812DCD000A6604 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0111E95C541C934C74E4750E /* Pods-stripeAppSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +370,7 @@
 		};
 		61C3F1CA24812DCD000A6604 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD8A503C31959CEAB9994133 /* Pods-stripeAppSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
