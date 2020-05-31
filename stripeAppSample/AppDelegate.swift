@@ -7,14 +7,21 @@
 //
 
 import UIKit
+import Stripe
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // setup your firebase account
+        FirebaseApp.configure()
+
+        // setup your stripe account
+        Stripe.setDefaultPublishableKey("your-test-secret-key")
+
         return true
     }
 

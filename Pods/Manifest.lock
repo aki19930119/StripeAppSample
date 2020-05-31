@@ -86,6 +86,7 @@ PODS:
   - GoogleUtilities/UserDefaults (6.6.0):
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (1.4.0)
+  - HydraAsync (2.0.2)
   - leveldb-library (1.22)
   - nanopb (1.30905.0):
     - nanopb/decode (= 1.30905.0)
@@ -100,6 +101,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Database
   - Firebase/Functions
+  - HydraAsync
   - Stripe
 
 SPEC REPOS:
@@ -119,6 +121,7 @@ SPEC REPOS:
     - GoogleDataTransportCCTSupport
     - GoogleUtilities
     - GTMSessionFetcher
+    - HydraAsync
     - leveldb-library
     - nanopb
     - PromisesObjC
@@ -140,11 +143,12 @@ SPEC CHECKSUMS:
   GoogleDataTransportCCTSupport: d70a561f7d236af529fee598835caad5e25f6d3d
   GoogleUtilities: 39530bc0ad980530298e9c4af8549e991fd033b1
   GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
+  HydraAsync: 690b8c1c9dcde7ee1093cee363a6c1ce36b56a83
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   Stripe: d481c2dab9a892fd923f097f854661217f70dc7f
 
-PODFILE CHECKSUM: 4f7a40143e155ee1d045d0e847e0248b0934f68b
+PODFILE CHECKSUM: 88aad0c5c3180110b7970c7c6b2652470ff401b4
 
 COCOAPODS: 1.9.2
