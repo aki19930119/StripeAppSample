@@ -10,6 +10,9 @@ import Stripe
 import Firebase
 import FirebaseFunctions
 
+import Stripe
+import FirebaseFunctions
+
 class StripeProvider: NSObject, STPCustomerEphemeralKeyProvider {
     lazy var functions = Functions.functions()
     let customerId: String

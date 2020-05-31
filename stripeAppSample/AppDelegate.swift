@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
 
         // setup your stripe account
-        Stripe.setDefaultPublishableKey("your-test-secret-key")
+        Stripe.setDefaultPublishableKey("sk_test_9WTDUfRayMUJlVu8VJoFAaQf00J3f0q96i")
 
         return true
     }
