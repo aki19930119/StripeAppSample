@@ -33,7 +33,7 @@ class ViewController: UIViewController, STPPaymentContextDelegate {
     private var paymentContext: STPPaymentContext?
     
     @IBAction func stripeButtonTapped(_ sender: Any) {
-        let customerId = "firestoreから取得"
+        let customerId = "cus_HO1OCU1JTqoo5d"
         let customerContext = STPCustomerContext(keyProvider: StripeProvider(customerId: customerId))
         paymentContext = STPPaymentContext(customerContext: customerContext)
         paymentContext!.delegate = self

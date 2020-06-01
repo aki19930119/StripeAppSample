@@ -30,7 +30,7 @@
 		61C3F1C324812DCD000A6604 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		61C3F1C524812DCD000A6604 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61C3F1CB24813326000A6604 /* StripeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripeProvider.swift; sourceTree = "<group>"; };
-		61C3F1CD24813763000A6604 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		61C3F1CD24813763000A6604 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Googleinfo/Stripe/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		61C3F1CF248138E7000A6604 /* StripeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripeRepository.swift; sourceTree = "<group>"; };
 		6D20E05B6AB1D967F19EFE8C /* Pods_stripeAppSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_stripeAppSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD8A503C31959CEAB9994133 /* Pods-stripeAppSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stripeAppSample.release.xcconfig"; path = "Target Support Files/Pods-stripeAppSample/Pods-stripeAppSample.release.xcconfig"; sourceTree = "<group>"; };
