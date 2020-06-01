@@ -9,7 +9,23 @@
 import UIKit
 import Stripe
 
-class ViewController: UIViewController, STPPaymentContextDelegate {
+class ViewController: UIViewController {
+    
+    @IBOutlet weak var payButton: UIButton!
+    private var paymentContext: STPPaymentContext?
+    
+    @IBAction func stripeButtonTapped(_ sender: Any) {
+        let customerId = "cus_HO1OCU1JTqoo5d"
+        let customerContext = STPCustomerContext(keyProvider: StripeProvider(customerId: customerId))
+        paymentContext = STPPaymentContext(customerContext: customerContext)
+        paymentContext!.delegate = self
+        paymentContext!.hostViewController = self
+        paymentContext!.paymentAmount = 5000
+        paymentContext!.presentPaymentOptionsViewController()
+    }
+}
+
+extension ViewController: STPPaymentContextDelegate {
     func paymentContextDidChange(_ paymentContext: STPPaymentContext) {
         print("paymentContextDidChange")
     }
@@ -28,17 +44,5 @@ class ViewController: UIViewController, STPPaymentContextDelegate {
         print("STPPaymentStatus")
         
     }
-    
-    @IBOutlet weak var payButton: UIButton!
-    private var paymentContext: STPPaymentContext?
-    
-    @IBAction func stripeButtonTapped(_ sender: Any) {
-        let customerId = "cus_HO1OCU1JTqoo5d"
-        let customerContext = STPCustomerContext(keyProvider: StripeProvider(customerId: customerId))
-        paymentContext = STPPaymentContext(customerContext: customerContext)
-        paymentContext!.delegate = self
-        paymentContext!.hostViewController = self
-        paymentContext!.paymentAmount = 5000
-        paymentContext!.presentPaymentOptionsViewController()
-    }
+
 }
