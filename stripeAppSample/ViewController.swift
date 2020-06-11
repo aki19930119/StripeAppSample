@@ -12,16 +12,18 @@ import Stripe
 class ViewController: UIViewController {
     
     @IBOutlet weak var payButton: UIButton!
+    
     private var paymentContext: STPPaymentContext?
     
     @IBAction func stripeButtonTapped(_ sender: Any) {
-        let customerId = "cus_HO1OCU1JTqoo5d"
+        let customerId = "firestoreから取得"
         let customerContext = STPCustomerContext(keyProvider: StripeProvider(customerId: customerId))
         paymentContext = STPPaymentContext(customerContext: customerContext)
         paymentContext!.delegate = self
         paymentContext!.hostViewController = self
         paymentContext!.paymentAmount = 5000
         paymentContext!.presentPaymentOptionsViewController()
+        
     }
 }
 
@@ -31,8 +33,8 @@ extension ViewController: STPPaymentContextDelegate {
     }
     
     func paymentContext(_ paymentContext: STPPaymentContext, didFailToLoadWithError error: Error) {
+        print(error)
         print("paymentContext")
-        
     }
     
     func paymentContext(_ paymentContext: STPPaymentContext, didCreatePaymentResult paymentResult: STPPaymentResult, completion: @escaping STPPaymentStatusBlock) {

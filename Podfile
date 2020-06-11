@@ -10,6 +10,7 @@ target 'stripeAppSample' do
   pod 'Firebase/Auth'
   pod 'Firebase/Functions'
   pod 'Firebase/Database'
+  pod 'Firebase/Firestore'
   pod 'Stripe'
   pod 'HydraAsync'
 

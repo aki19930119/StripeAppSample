@@ -6,10 +6,10 @@
 //  Copyright © 2020 柿沼儀揚. All rights reserved.
 //
 
-import Hydra
 import FirebaseFunctions
 
 class StripeRepository {
+    
     lazy var functions = Functions.functions()
     
     func createCustomerId(email: String, completion: ((String?, Error?) -> Void)?){

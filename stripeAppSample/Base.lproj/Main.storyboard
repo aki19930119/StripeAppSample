@@ -39,6 +39,7 @@
         <!--View Controller-->
         <scene sceneID="A31-rO-rlI">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wm8-LY-pZj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="KfH-no-RTh" customClass="ViewController" customModule="stripeAppSample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rJY-VU-aZN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
@@ -48,7 +49,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="M61-Fv-jjY"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wm8-LY-pZj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="955" y="100"/>
         </scene>
