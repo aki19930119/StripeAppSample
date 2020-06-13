@@ -16,9 +16,11 @@ exports.createStripeEphemeralKeys = functions.https.onCall((data, context) => {
     const stripe_version = data.stripe_version;
     return stripe.ephemeralKeys
         .create({
-            customer: customerId,
-            stripe_version: stripe_version
-        })
+            customer: customerId
+        }, {
+                apiVersion: stripe_version,
+                idempotencyKey: data.idempotencyKey
+            })
 });
 
 // MARK: - Stripeの決済する
