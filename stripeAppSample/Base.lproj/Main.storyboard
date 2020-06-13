@@ -15,42 +15,70 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T4F-7T-FaJ">
-                                <rect key="frame" x="126" y="433" width="162" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T4F-7T-FaJ">
+                                <rect key="frame" x="102" y="428" width="210" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="BGc-n2-z5j"/>
+                                    <constraint firstAttribute="width" constant="210" id="So6-7H-HXg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="カードを選択する"/>
                                 <connections>
-                                    <action selector="stripeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Scz-hU-moz"/>
+                                    <action selector="stripeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KAc-fK-DR6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNh-jp-Kag">
+                                <rect key="frame" x="207" y="264" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vUt-lE-h3N">
+                                <rect key="frame" x="187" y="194" width="40" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="X3d-De-frk"/>
+                                    <constraint firstAttribute="width" constant="40" id="mEC-bY-NzL"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Awm-y1-9Hb">
+                                <rect key="frame" x="57" y="518" width="300" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.01208707165" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="HGx-wA-ISh"/>
+                                    <constraint firstAttribute="width" constant="300" id="owh-oK-e9A"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="決済する">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="payButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lVn-Zy-M9o"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Awm-y1-9Hb" firstAttribute="top" secondItem="T4F-7T-FaJ" secondAttribute="bottom" constant="50" id="7em-IL-CWF"/>
+                            <constraint firstItem="vUt-lE-h3N" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="Bi0-38-Tc0"/>
+                            <constraint firstItem="T4F-7T-FaJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JIJ-qN-nDm"/>
+                            <constraint firstItem="vUt-lE-h3N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KaO-hj-Ufj"/>
+                            <constraint firstItem="vUt-lE-h3N" firstAttribute="centerX" secondItem="T4F-7T-FaJ" secondAttribute="centerX" id="Kbu-82-Hjn"/>
+                            <constraint firstItem="T4F-7T-FaJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Pum-qX-NGO"/>
+                            <constraint firstItem="Awm-y1-9Hb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="o5j-pF-uv7"/>
+                            <constraint firstItem="vUt-lE-h3N" firstAttribute="centerX" secondItem="rNh-jp-Kag" secondAttribute="centerX" id="sxm-7W-eTc"/>
+                            <constraint firstItem="rNh-jp-Kag" firstAttribute="top" secondItem="vUt-lE-h3N" secondAttribute="bottom" constant="20" id="szP-Jl-tUY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="payButton" destination="T4F-7T-FaJ" id="1K5-x8-vAI"/>
-                        <segue destination="KfH-no-RTh" kind="show" id="jES-6k-ao6"/>
+                        <outlet property="cardImageView" destination="vUt-lE-h3N" id="b1R-2d-S0u"/>
+                        <outlet property="cardNameLabel" destination="rNh-jp-Kag" id="hlm-iX-GVN"/>
+                        <outlet property="chooseButton" destination="T4F-7T-FaJ" id="xVg-RV-R3f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="99.776785714285708"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="A31-rO-rlI">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wm8-LY-pZj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="KfH-no-RTh" customClass="ViewController" customModule="stripeAppSample" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="rJY-VU-aZN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="Jbh-aW-hOQ"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="M61-Fv-jjY"/>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="955" y="100"/>
+            <point key="canvasLocation" x="101.44927536231884" y="-109.82142857142857"/>
         </scene>
     </scenes>
 </document>

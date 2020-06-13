@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0DBC8F19CB33A61A7CEAD2BF /* Pods_stripeAppSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D20E05B6AB1D967F19EFE8C /* Pods_stripeAppSample.framework */; };
+		616D033A249513F900DA3F5A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 616D0339249513F900DA3F5A /* GoogleService-Info.plist */; };
+		616D033C24954D0100DA3F5A /* stripeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616D033B24954D0100DA3F5A /* stripeUseCase.swift */; };
+		616D033E24954D3100DA3F5A /* UserDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616D033D24954D3100DA3F5A /* UserDataStore.swift */; };
 		61C3F1B824812DCB000A6604 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C3F1B724812DCB000A6604 /* AppDelegate.swift */; };
 		61C3F1BA24812DCB000A6604 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C3F1B924812DCB000A6604 /* SceneDelegate.swift */; };
 		61C3F1BC24812DCB000A6604 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C3F1BB24812DCB000A6604 /* ViewController.swift */; };
@@ -15,12 +18,14 @@
 		61C3F1C124812DCD000A6604 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61C3F1C024812DCD000A6604 /* Assets.xcassets */; };
 		61C3F1C424812DCD000A6604 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61C3F1C224812DCD000A6604 /* LaunchScreen.storyboard */; };
 		61C3F1CC24813326000A6604 /* StripeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C3F1CB24813326000A6604 /* StripeProvider.swift */; };
-		61C3F1CE24813763000A6604 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 61C3F1CD24813763000A6604 /* GoogleService-Info.plist */; };
 		61C3F1D0248138E7000A6604 /* StripeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C3F1CF248138E7000A6604 /* StripeRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0111E95C541C934C74E4750E /* Pods-stripeAppSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stripeAppSample.debug.xcconfig"; path = "Target Support Files/Pods-stripeAppSample/Pods-stripeAppSample.debug.xcconfig"; sourceTree = "<group>"; };
+		616D0339249513F900DA3F5A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		616D033B24954D0100DA3F5A /* stripeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stripeUseCase.swift; sourceTree = "<group>"; };
+		616D033D24954D3100DA3F5A /* UserDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataStore.swift; sourceTree = "<group>"; };
 		61C3F1B424812DCB000A6604 /* stripeAppSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stripeAppSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61C3F1B724812DCB000A6604 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61C3F1B924812DCB000A6604 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,7 +35,6 @@
 		61C3F1C324812DCD000A6604 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		61C3F1C524812DCD000A6604 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61C3F1CB24813326000A6604 /* StripeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripeProvider.swift; sourceTree = "<group>"; };
-		61C3F1CD24813763000A6604 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Googleinfo/Stripe/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		61C3F1CF248138E7000A6604 /* StripeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripeRepository.swift; sourceTree = "<group>"; };
 		6D20E05B6AB1D967F19EFE8C /* Pods_stripeAppSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_stripeAppSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD8A503C31959CEAB9994133 /* Pods-stripeAppSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stripeAppSample.release.xcconfig"; path = "Target Support Files/Pods-stripeAppSample/Pods-stripeAppSample.release.xcconfig"; sourceTree = "<group>"; };
@@ -80,13 +84,15 @@
 				61C3F1B724812DCB000A6604 /* AppDelegate.swift */,
 				61C3F1B924812DCB000A6604 /* SceneDelegate.swift */,
 				61C3F1BB24812DCB000A6604 /* ViewController.swift */,
+				61C3F1CB24813326000A6604 /* StripeProvider.swift */,
+				61C3F1CF248138E7000A6604 /* StripeRepository.swift */,
+				616D033B24954D0100DA3F5A /* stripeUseCase.swift */,
+				616D033D24954D3100DA3F5A /* UserDataStore.swift */,
 				61C3F1BD24812DCB000A6604 /* Main.storyboard */,
 				61C3F1C024812DCD000A6604 /* Assets.xcassets */,
 				61C3F1C224812DCD000A6604 /* LaunchScreen.storyboard */,
 				61C3F1C524812DCD000A6604 /* Info.plist */,
-				61C3F1CB24813326000A6604 /* StripeProvider.swift */,
-				61C3F1CD24813763000A6604 /* GoogleService-Info.plist */,
-				61C3F1CF248138E7000A6604 /* StripeRepository.swift */,
+				616D0339249513F900DA3F5A /* GoogleService-Info.plist */,
 			);
 			path = stripeAppSample;
 			sourceTree = "<group>";
@@ -161,7 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61C3F1C424812DCD000A6604 /* LaunchScreen.storyboard in Resources */,
-				61C3F1CE24813763000A6604 /* GoogleService-Info.plist in Resources */,
+				616D033A249513F900DA3F5A /* GoogleService-Info.plist in Resources */,
 				61C3F1C124812DCD000A6604 /* Assets.xcassets in Resources */,
 				61C3F1BF24812DCB000A6604 /* Main.storyboard in Resources */,
 			);
@@ -216,10 +222,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				616D033C24954D0100DA3F5A /* stripeUseCase.swift in Sources */,
 				61C3F1BC24812DCB000A6604 /* ViewController.swift in Sources */,
 				61C3F1CC24813326000A6604 /* StripeProvider.swift in Sources */,
 				61C3F1B824812DCB000A6604 /* AppDelegate.swift in Sources */,
 				61C3F1BA24812DCB000A6604 /* SceneDelegate.swift in Sources */,
+				616D033E24954D3100DA3F5A /* UserDataStore.swift in Sources */,
 				61C3F1D0248138E7000A6604 /* StripeRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,7 +380,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.akiblog.stripeAppSample;
+				PRODUCT_BUNDLE_IDENTIFIER = org.akiblog.stripeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -391,7 +399,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.akiblog.stripeAppSample;
+				PRODUCT_BUNDLE_IDENTIFIER = org.akiblog.stripeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

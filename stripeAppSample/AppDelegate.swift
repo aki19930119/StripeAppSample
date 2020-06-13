@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
 
         // setup your stripe account
-        Stripe.setDefaultPublishableKey("sk_test_9WTDUfRayMUJlVu8VJoFAaQf00J3f0q96i")
+        Stripe.setDefaultPublishableKey("pk_test_87mdAwA3OVggdKjGrhxgFwaY00ao6TR9PS")
 
         return true
     }

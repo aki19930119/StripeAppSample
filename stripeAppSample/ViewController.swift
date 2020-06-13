@@ -8,37 +8,51 @@
 
 import UIKit
 import Stripe
+import FirebaseFirestore
+
 
 class ViewController: UIViewController {
-    
-    @IBOutlet weak var payButton: UIButton!
+    @IBOutlet weak var cardNameLabel: UILabel!
+    @IBOutlet weak var cardImageView: UIImageView!
+    @IBOutlet weak var chooseButton: UIButton!
     
     private var paymentContext: STPPaymentContext?
     
     @IBAction func stripeButtonTapped(_ sender: Any) {
-        let customerId = "firestoreから取得"
+        let customerId = "cus_HSSpOSharNnoFh"
         let customerContext = STPCustomerContext(keyProvider: StripeProvider(customerId: customerId))
         paymentContext = STPPaymentContext(customerContext: customerContext)
         paymentContext!.delegate = self
         paymentContext!.hostViewController = self
-        paymentContext!.paymentAmount = 5000
+//        paymentContext!.paymentAmount = 5000
         paymentContext!.presentPaymentOptionsViewController()
         
+    }
+    
+    
+    @IBAction func payButtonTapped(_ sender: Any) {
+        paymentContext?.requestPayment()
+
     }
 }
 
 extension ViewController: STPPaymentContextDelegate {
     func paymentContextDidChange(_ paymentContext: STPPaymentContext) {
         print("paymentContextDidChange")
+        cardNameLabel.text = paymentContext.selectedPaymentOption?.label
+        cardImageView.image = paymentContext.selectedPaymentOption?.image
+
     }
     
     func paymentContext(_ paymentContext: STPPaymentContext, didFailToLoadWithError error: Error) {
-        print(error)
+        print(paymentContext)
         print("paymentContext")
     }
     
     func paymentContext(_ paymentContext: STPPaymentContext, didCreatePaymentResult paymentResult: STPPaymentResult, completion: @escaping STPPaymentStatusBlock) {
         print("STPPaymentResult")
+        print(paymentContext)
+        
         
     }
     
