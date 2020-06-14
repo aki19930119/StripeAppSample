@@ -21,10 +21,10 @@ class ViewController: UIViewController {
     private let useCase = StripeUseCase()
     
     @IBAction func stripeButtonTapped(_ sender: Any) {
-        //        let customerId = "cus_HSSpOSharNnoFh"
-        guard let customerId = UserDataStore.getString(.stripeCustomerId) else {
-            return
-        }
+                let customerId = "cus_HSSpOSharNnoFh"
+//        guard let customerId = UserDataStore.getString(.stripeCustomerId) else {
+//            return
+//        }
         
         let customerContext = STPCustomerContext(keyProvider: StripeProvider(customerId: customerId))
         paymentContext = STPPaymentContext(customerContext: customerContext)
@@ -62,21 +62,17 @@ extension ViewController: STPPaymentContextDelegate {
     
     func paymentContext(_ paymentContext: STPPaymentContext, didCreatePaymentResult paymentResult: STPPaymentResult, completion: @escaping STPPaymentStatusBlock) {
         print("STPPaymentResult")
-        print(paymentContext)
-            let sourceId = paymentResult.source.stripeID
-            let paymentAmount = paymentContext.paymentAmount
-            useCase
-                .charge(sourceId: sourceId, amount: paymentAmount)
-                .then {
-                    completion(nil)
-                }.catch { error in
-                    completion(error)
-            }
-        }
-}
+        print(paymentResult)
+        print(completion)
 
-func paymentContext(_ paymentContext: STPPaymentContext, didFinishWith status: STPPaymentStatus, error: Error?) {
-    print("STPPaymentStatus")
-    
+//        let sourceId = paymentResult.source.stripeID
+//        let paymentAmount = paymentContext.paymentAmount
+//        useCase
+//            .charge(sourceId: sourceId, amount: paymentAmount)
+//            .then {
+//                completion(nil)
+//        }.catch { error in
+//            completion(error)
+//        }
+    }
 }
-
