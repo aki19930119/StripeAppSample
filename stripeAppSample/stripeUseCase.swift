@@ -10,11 +10,11 @@ import Hydra
 
 class StripeUseCase {
     private let stripeRepo = StripeRepository()
-
+    
     private func createStripeCustomerId(email: String) -> Promise<String> {
         return stripeRepo.createCustomerId(email: email)
     }
-
+    
     func charge(sourceId: String, amount: Int) -> Promise<Void> {
         guard let customerId = UserDataStore.getString(.stripeCustomerId) else {
             return Promise<Void>.init(rejected: ClientError.cast)

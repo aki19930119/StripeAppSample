@@ -28,6 +28,7 @@ class StripeProvider: NSObject, STPCustomerEphemeralKeyProvider {
             .call(data) { result, error in
                 
                 if let error = error {
+                    print(error.localizedDescription)
                     completion(nil, error)
                 } else if let data = result?.data as? [String: Any] {
                     completion(data, nil)
@@ -35,3 +36,4 @@ class StripeProvider: NSObject, STPCustomerEphemeralKeyProvider {
         }
     }
 }
+
