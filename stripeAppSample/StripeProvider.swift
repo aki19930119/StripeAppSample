@@ -36,4 +36,3 @@ class StripeProvider: NSObject, STPCustomerEphemeralKeyProvider {
         }
     }
 }
-

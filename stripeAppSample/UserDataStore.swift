@@ -10,8 +10,6 @@ import Foundation
 
 class UserDataStore {
     private static let userDefaults = UserDefaults.standard
-//    private static let userDefaults = "cus_HTPT6Ga92d5iPd"
-
     
     enum UserKeys: String {
         case stripeCustomerId
