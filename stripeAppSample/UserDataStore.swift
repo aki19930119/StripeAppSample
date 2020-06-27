@@ -11,6 +11,7 @@ import Foundation
 class UserDataStore {
     private static let userDefaults = UserDefaults.standard
     
+    //エラーの定義
     enum UserKeys: String {
         case stripeCustomerId
     }

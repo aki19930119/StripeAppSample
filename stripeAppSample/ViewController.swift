@@ -11,8 +11,6 @@ import Stripe
 import FirebaseFirestore
 import Firebase
 
-//private let useCase = StripeUseCase()
-
 class ViewController: UIViewController {
     @IBOutlet weak var cardNameLabel: UILabel!
     @IBOutlet weak var cardImageView: UIImageView!
@@ -23,7 +21,6 @@ class ViewController: UIViewController {
     private let useCase = StripeUseCase()
     private let striperepo = StripeRepository()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,11 +28,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func stripeButtonTapped(_ sender: Any) {
+        //firestoreから取得する仕様にする必要がある
         let customerId = "cus_HSSpOSharNnoFh"
-        //        guard let customerId = UserDataStore.getString(.stripeCustomerId) else {
-        //            return
-        //        }
-        
         let customerContext = STPCustomerContext(keyProvider: StripeProvider(customerId: customerId))
         paymentContext = STPPaymentContext(customerContext: customerContext)
         paymentContext!.delegate = self
@@ -45,12 +39,13 @@ class ViewController: UIViewController {
         
     }
     
-    
+    //payButtonがタップされた時の処理
     @IBAction func payButtonTapped(_ sender: Any) {
         paymentContext?.requestPayment()
         
     }
 }
+
 extension ViewController: STPPaymentContextDelegate {
     func paymentContextDidChange(_ paymentContext: STPPaymentContext) {
         cardNameLabel.text = paymentContext.selectedPaymentOption?.label
@@ -63,7 +58,7 @@ extension ViewController: STPPaymentContextDelegate {
         print("paymentContext")
         
     }
-    
+    //決済の時に呼ばれる
     func paymentContext(_ paymentContext: STPPaymentContext, didCreatePaymentResult paymentResult: STPPaymentResult, completion: @escaping STPPaymentStatusBlock) {
         print("STPPaymentResult")
         
@@ -71,8 +66,7 @@ extension ViewController: STPPaymentContextDelegate {
         print(sourceId)
         let paymentAmount = paymentContext.paymentAmount
         print(paymentAmount)
-        useCase
-            .charge(sourceId: sourceId, amount: paymentAmount)
+        useCase.charge(sourceId: sourceId, amount: paymentAmount)
 //            .then {
 //                completion(nil, <#Error?#>)
 //        }.catch { error in
@@ -80,6 +74,7 @@ extension ViewController: STPPaymentContextDelegate {
 //        }
     }
     
+    //決済に成功したら呼ばれる
     func paymentContext(_ paymentContext: STPPaymentContext, didFinishWith status: STPPaymentStatus, error: Error?) {
         print("didFinishWith")
         
